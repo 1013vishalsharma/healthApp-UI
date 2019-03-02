@@ -1,3 +1,38 @@
-<p>
+<!-- <p>
   login works!
-</p>
+</p> -->
+
+
+<div style="background-color: darkolivegreen; height: 70px; text-align: center">
+  <button style="background-color: white; border: none; color: darkolivegreen;
+  padding: 10px 25px;
+  font-size: 16px;
+  display: block; margin-top: 15px; margin-right: 15px;
+  border-radius: 3px; position: absolute; right: 0;"  >Sign In</button>
+</div>
+
+<div style="text-align: center"> 
+<h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-size: 30px; font-weight: bolder">Health Training App </h1>
+</div>
+<div class="mod-div">
+<form>
+  <input type="text" placeholder="Enter your Email or Username *" 
+  class="mod-input" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+  <br>
+  <input type="text" placeholder="Enter your Password *" 
+  class="mod-input" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+  <br>
+  <button class="mod-button" (click)="login()" >Login</button>
+</form>
+</div>
+
+<!-- <ul class="products">
+  <li *ngFor="let p of products; let i=index;">
+    <a routerLink="/product-details/{{p._id}}">
+      <span class="badge">{{i+1}}</span> {{p.prod_name}}
+    </a>
+    <button class="delete" title="delete product"
+      (click)="delete(p._id)">x</button>
+  </li>
+</ul> -->
