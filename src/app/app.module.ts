@@ -7,12 +7,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {
     path: 'challenge',
     component: LoginComponent,
     data: {title: 'Login Details'}
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: {title: 'Dashboard details'}
   }
 ];
 
@@ -20,7 +26,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
