@@ -1,0 +1,18 @@
+.div-track {
+    height: 200px; 
+    width: 200px; 
+    margin: 40px; 
+    box-sizing: border-box;
+    box-shadow: 0 6px 16px 0 darkolivegreen; 
+    display: inline-block;
+}
+
+.h1-div {
+    color: darkolivegreen; 
+    display: flex; 
+    justify-content: center; 
+    align-content: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 40%;
+}
