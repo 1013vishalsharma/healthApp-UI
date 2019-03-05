@@ -9,18 +9,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-const appRoutes: Routes = [
-  {
-    path: 'challenge',
-    component: LoginComponent,
-    data: {title: 'Login Details'}
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: {title: 'Dashboard details'}
-  }
-];
+// const appRoutes: Routes = [
+//   {
+//     path: 'login',
+//     component: LoginComponent,
+//     data: {title: 'Login Details'}
+//   },
+//   {
+//     path: 'dashboard',
+//     component: DashboardComponent,
+//     data: {title: 'Dashboard details'}
+//   }
+// ];
 
 
 @NgModule({
@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     DashboardComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    //RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
     HttpModule,
