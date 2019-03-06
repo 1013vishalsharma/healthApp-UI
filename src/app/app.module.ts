@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FitnessTrackComponent } from './fitness-track/fitness-track.component';
 
 // const appRoutes: Routes = [
 //   {
@@ -27,7 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FitnessTrackComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),
