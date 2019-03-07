@@ -9,19 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FitnessTrackComponent } from './fitness-track/fitness-track.component';
-
-// const appRoutes: Routes = [
-//   {
-//     path: 'login',
-//     component: LoginComponent,
-//     data: {title: 'Login Details'}
-//   },
-//   {
-//     path: 'dashboard',
-//     component: DashboardComponent,
-//     data: {title: 'Dashboard details'}
-//   }
-// ];
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './AuthInterceptor';
 
 
 @NgModule({
@@ -39,7 +28,12 @@ import { FitnessTrackComponent } from './fitness-track/fitness-track.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AppModule],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true},
+    AppModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
