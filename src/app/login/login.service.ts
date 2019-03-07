@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { map, tap, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Login } from './login';
+import * as moment from 'moment';
 
 @Injectable({
     providedIn: 'root'
@@ -29,8 +30,10 @@ export class LoginService {
 
    login(loginData: Login): Observable<any>{
     console.log(loginData);
-       return this.http.post(this.loginUrl, loginData).pipe(map(this.extractData));
-   }
+       const token = this.http.post(this.loginUrl, loginData).pipe(map(this.extractData));
+       console.log('token in login service: '+token);
+       return token;
+   } 
 
 
    getData(): Observable<any>{

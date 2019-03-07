@@ -25,7 +25,18 @@ export class LoginComponent implements OnInit {
     this.loginService.login(new Login(this.email, this.password))
     .subscribe((data: {}) => {
       console.log(data);
+      this.setSession(data);
     });
     this.router.navigate(['/dashboard']);
+  }
+
+
+  private setSession(authToken){
+    console.log(authToken.token);
+    localStorage.setItem('jwtToken', authToken.token);
+  }
+
+  logout(){
+    localStorage.removeItem('jwtToken');
   }
 }
