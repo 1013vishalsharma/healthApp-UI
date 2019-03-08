@@ -15,7 +15,6 @@ export class LoginService {
   data: any = {};
   
   constructor(private http: HttpClient) {
-    console.log('hello user');
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded'
