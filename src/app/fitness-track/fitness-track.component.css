@@ -1,0 +1,25 @@
+.fitness-div {
+    width: 20%; 
+    height: 100; 
+    display: inline-block; 
+    vertical-align: middle;
+}
+.fitness-pic-div {
+    height: 70px; 
+    text-align: center; 
+    vertical-align: middle;
+}
+.fitness-h2-div {
+    text-align: center; 
+    vertical-align: middle; 
+    height: auto;
+}
+.fitness-i {
+    font-size: 50   px;
+    color: darkolivegreen; 
+    text-shadow:2px 2px 4px darkolivegreen; 
+    padding-top: 7px;
+}
+.fitness-i-font-size {
+    font-size: 90px;
+}
