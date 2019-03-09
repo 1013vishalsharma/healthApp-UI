@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { map, tap, catchError } from 'rxjs/operators';
+import { WorkoutDetails } from '../workout-details/workout-details';
 
 
 @Component({
@@ -14,6 +15,8 @@ import { map, tap, catchError } from 'rxjs/operators';
 export class FitnessTrackComponent implements OnInit {
 
   private fitnessTrackUrl = 'http://localhost:3000/workout';
+  private workoutDetails: WorkoutDetails = {};
+  private hrs;
   constructor(private http: HttpClient) { 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -36,7 +39,9 @@ export class FitnessTrackComponent implements OnInit {
     .pipe(map(this.extractData))
     .subscribe((data: {}) => {
       console.log(data);
+      this.workoutDetails = data;
+      console.log('workoutdetails: '+this.workoutDetails);
+      //console.log(this.workoutDetails.hrselft)
     });
   }
-
 }
