@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { map, tap, catchError } from 'rxjs/operators';
 import { WorkoutDetails } from '../workout-details/workout-details';
+import { IWorkoutDetails } from '../workout-details/Iworkout-details';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { WorkoutDetails } from '../workout-details/workout-details';
 export class FitnessTrackComponent implements OnInit {
 
   private fitnessTrackUrl = 'http://localhost:3000/workout';
-  private workoutDetails: WorkoutDetails = {};
+  private workoutDetails: IWorkoutDetails = {};
   private hrs;
   constructor(private http: HttpClient) { 
     const httpOptions = {
@@ -41,7 +42,17 @@ export class FitnessTrackComponent implements OnInit {
       console.log(data);
       this.workoutDetails = data;
       console.log('workoutdetails: '+this.workoutDetails);
-      //console.log(this.workoutDetails.hrselft)
+      this.lastWorkoutDay(this.workoutDetails.workoutTime);
     });
+  }
+
+  private lastWorkoutDay(date: any){
+    var sampleDate: Date = new Date(date);
+
+    console.log(sampleDate);
+    var lastWorkoutDate = sampleDate.toString().substring(0, 10);
+    //console.log(str);
+    this.workoutDetails.workoutTime = lastWorkoutDate;
+
   }
 }
