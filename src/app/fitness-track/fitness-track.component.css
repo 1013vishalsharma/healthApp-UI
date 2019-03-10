@@ -46,3 +46,21 @@
 .fitness-i-font-size {
     font-size: 90px;
 }
+i.material-icons:hover {
+    background-color: transparent;
+    transform: rotate(90deg);
+    cursor: pointer;
+    box-shadow: none;
+}
+/* i.material-icons:hover:after {
+    transform: scale(1);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+} */
+/* i:focus i {
+    animation: rotate 1s ease-in-out 0s;
+  }
+  
+  @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+  } */
