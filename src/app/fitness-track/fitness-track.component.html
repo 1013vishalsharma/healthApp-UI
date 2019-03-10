@@ -1,54 +1,45 @@
-<div style="display: flex; flex-direction: row;
-box-sizing: border-box; 
-box-shadow: 0 6px 16px 0 darkolivegreen;">
-  <div style="width: 20%; height: 90px; display: flex">
-    <div style="width: 100%; height: 100%; display: flex;
-      justify-content: center; align-items: center;">
-      <h1 style="color: darkolivegreen">Fitness Info: </h1>
+<div class="fitness-top-div">
+  
+  <div class="fitness-div">
+    <div class="fitness-h1-div">
+      <h1 class="fitness-h1-h2">Fitness Info: </h1>
     </div>
   </div>
-  <div style="width: 20%; height: 90px; display: flex; flex-direction: column;">
-    <div style="height: 60px; width: 100%; display: flex; justify-content: center;
-    align-items: center">
-        <i class="material-icons" style="font-size:50px;
-        color: darkolivegreen; text-shadow:2px 2px 4px darkolivegreen">update</i>
+  
+  <div class="fitness-div fitness-i-top-div">
+    <div class="fitness-pic-div">
+      <i class='far fa-clock fitness-i'></i>  
     </div>
-    <div style="display: flex; justify-content: center; align-items: center">
-        <h2 style="color: darkolivegreen">Hours left: {{workoutDetails.hrsleft}}</h2>
+    <div class="fitness-h2-div">
+        <h3 class="fitness-h1-h2">Hours left: {{workoutDetails.hrsleft}}</h3>
     </div>
   </div>
-    <!-- <div class="fitness-div">
-      <div class="fitness-pic-div">
-        <i class="material-icons" style="font-size:75px;
-        color: darkolivegreen; text-shadow:2px 2px 4px darkolivegreen">update</i>
-      </div>
-      <div class="fitness-h2-div">
-        <h4 style="color: darkolivegreen">Hours left: {{workoutDetails.hrsleft}}</h4>
-      </div>  
+
+  <div class="fitness-div fitness-i-top-div">
+    <div class="fitness-pic-div">
+      <i class='fas fa-rupee-sign fitness-i'></i>
     </div>
-    <!-- <div class="fitness-div">
-      <div class="fitness-pic-div">
-        <i class='fas fa-rupee-sign fitness-i'></i>
-      </div>
-      <div class="fitness-h2-div">
-        <h2 style="color: darkolivegreen">Money: {{workoutDetails.moneyCollected}}</h2>
-      </div>  
+    <div class="fitness-h2-div">
+      <h3 class="fitness-h1-h2">Money: {{workoutDetails.moneyCollected}}</h3>
     </div>
-    <div class="fitness-div">
-      <div class="fitness-pic-div">
-        <i class='fas fa-dumbbell fitness-i'></i>
-      </div>
-      <div class="fitness-h2-div">
-        <h2 style="color: darkolivegreen">Type: {{workoutDetails.workoutType}}</h2>
-      </div>  
+  </div>
+
+  <div class="fitness-div fitness-i-top-div">
+    <div class="fitness-pic-div">
+      <i class='fas fa-dumbbell fitness-i'></i>
     </div>
-    <div class="fitness-div">
-      <div class="fitness-pic-div">
-        <i class='far fa-calendar-alt fitness-i'></i>
-      </div>
-      <div class="fitness-h2-div">
-        <h2 style="color: darkolivegreen">Last Wrkt: {{workoutDetails.workoutTime}}</h2>
-      </div>  
+    <div class="fitness-h2-div">
+      <h3 class="fitness-h1-h2">Type: {{workoutDetails.workoutType}}</h3>
     </div>
-  </div> -->
+  </div>
+
+  <div class="fitness-div fitness-i-top-div">
+    <div class="fitness-pic-div">
+      <i class='far fa-calendar-alt fitness-i'></i>
+    </div>
+    <div class="fitness-h2-div">
+      <h3 class="fitness-h1-h2">Last Workout: {{workoutDetails.workoutTime}}</h3>
+    </div>
+  </div>
+
 </div>
