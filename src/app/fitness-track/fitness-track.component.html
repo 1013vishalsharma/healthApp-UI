@@ -41,10 +41,30 @@
       <h3 class="fitness-h1-h2">Last Workout: {{workoutDetails.workoutTime}}</h3>
     </div>
   </div>
+</div>
 
-
-<div style="width: 20%; min-height: 100%; float: right; display: flex;
- flex-flow: column;"> size aya
+<div style="display: flex; flex-direction: column-reverse; width: 30%; height: 100%;
+  float: right"> 
+  <div class="fitness-add_circle_div">
+      <i class="material-icons" style="color: darkolivegreen; font-size: 50px;
+      transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease"
+      (click) = toggleShowHide()>
+      add_circle</i>
+  </div>
+  <div class="fitness-button-div">
+    <button class="fitness-button"  >Add Activity</button>
+  </div>
+  <div class="fitness-button-div">
+    <button class="fitness-button">Update Activity</button>
+  </div>
+  <div class="fitness-button-div">
+    <button class="fitness-button">Delete Activity</button>
+  </div>
+  <div class="fitness-button-div">
+    <button class="fitness-button">Get Activity</button>
+  </div>
+  <div class="fitness-button-div"></div>
+    
   <!-- <div style="display: flex; justify-content: flex-end; margin: 30px; flex: 1 1">
       <i class="material-icons" style="color: darkolivegreen; font-size: 65px;
       transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;">
@@ -57,5 +77,4 @@
       display: block; margin-top: 15px; margin-right: 15px;
       border-radius: 3px; position: absolute; right: 0;"  >Add Activity</button>
   </div> -->
-</div>
 </div>
