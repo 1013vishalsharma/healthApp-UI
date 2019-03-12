@@ -52,6 +52,26 @@ i.material-icons:hover {
     cursor: pointer;
     box-shadow: none;
 }
+.fitness-button-div {
+    display: flex; 
+    height: 60px;
+    justify-content: center; 
+    align-items: center;
+}
+.fitness-button {
+    background-color: white; 
+    border:  2px solid darkolivegreen; 
+    color: darkolivegreen;
+    font-size: 16px; 
+    padding: 5px;
+    border-radius: 5px; right: 0;
+}
+.fitness-add_circle_div {
+    display: flex; 
+    height: 80px;
+    justify-content: flex-end; 
+    margin: 20px
+}
 /* i.material-icons:hover:after {
     transform: scale(1);
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);

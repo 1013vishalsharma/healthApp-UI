@@ -48,11 +48,12 @@ export class FitnessTrackComponent implements OnInit {
 
   private lastWorkoutDay(date: any){
     var sampleDate: Date = new Date(date);
-
     console.log(sampleDate);
     var lastWorkoutDate = sampleDate.toString().substring(0, 10);
-    //console.log(str);
     this.workoutDetails.workoutTime = lastWorkoutDate;
+  }
 
+  toggleShowHide(){
+    
   }
 }
