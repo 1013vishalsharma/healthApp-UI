@@ -3,12 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../app/dashboard/dashboard.component';
 import { LoginComponent } from '../app/login/login.component';
 import { FitnessTrackComponent } from '../app/fitness-track/fitness-track.component';
+import { SampleComponent } from '../app/sample/sample.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/sample',
     pathMatch: 'full'
+  },
+  {
+    path: 'sample',
+    component: SampleComponent,
+    data: {title: 'Sample Bootstrap Details'}
   },
   {
     path: 'login',
