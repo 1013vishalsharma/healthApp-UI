@@ -8,36 +8,36 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-const appRoutes: Routes = [
-  {
-    path: 'challenge',
-    component: LoginComponent,
-    data: {title: 'Login Details'}
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: {title: 'Dashboard details'}
-  }
-];
+import { FitnessTrackComponent } from './fitness-track/fitness-track.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './AuthInterceptor';
+import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
+import { SampleComponent } from './sample/sample.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    FitnessTrackComponent,
+    WorkoutDetailsComponent,
+    SampleComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    //RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
     HttpModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [AppModule],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true},
+    AppModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

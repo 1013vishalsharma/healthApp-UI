@@ -42,3 +42,11 @@ body,html {
     margin: 0;
     padding: 0
 }
+
+hr {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px; 
+    height: 4px; 
+    background-color: darkolivegreen
+}

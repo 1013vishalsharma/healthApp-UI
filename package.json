@@ -23,7 +23,8 @@
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26",
-    "@angular/http": "^7.2.5"
+    "@angular/http": "^7.2.5",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
