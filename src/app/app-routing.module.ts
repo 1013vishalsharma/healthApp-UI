@@ -4,6 +4,7 @@ import { DashboardComponent } from '../app/dashboard/dashboard.component';
 import { LoginComponent } from '../app/login/login.component';
 import { FitnessTrackComponent } from '../app/fitness-track/fitness-track.component';
 import { SampleComponent } from '../app/sample/sample.component';
+import { RegisterComponent } from '../app/register/register.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
     path: 'fitness-track',
     component: FitnessTrackComponent,
     data: {title: 'Fitness-Track'}
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    data: {title: 'Register'}
   }
 ];
 

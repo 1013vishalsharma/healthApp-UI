@@ -13,6 +13,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './AuthInterceptor';
 import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
 import { SampleComponent } from './sample/sample.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SampleComponent } from './sample/sample.component';
     DashboardComponent,
     FitnessTrackComponent,
     WorkoutDetailsComponent,
-    SampleComponent
+    SampleComponent,
+    RegisterComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),
