@@ -7,6 +7,7 @@
     border: 0;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+   
   }
   
   .card-signin .card-title {
@@ -24,7 +25,7 @@
   }
   
   .form-signin .btn {
-    font-size: 70%;
+    font-size: 100%;
     
     border:none;
     font-weight: bold;
@@ -36,24 +37,28 @@
     display: -ms-flexbox; /* IE10 */
     display: flex;
     width: 100%;
-    margin-bottom: -8px;
+    margin-bottom: 5px;
   }
  
   .icon {
-    padding: 5px;
-   
+    padding: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color:gray;
+    border-image: initial;
     color:black;
     min-width: 50px;
     text-align: center;
-   
-   border:2px;
-    border-color: gray;
+    border-right:0px;
+    border-radius: 5px 0px 0px 5px;
   }
   
   .form-control {
     border-color: gray;
-   
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px;
   }
+ 
   .form-control:focus{border-color: gray;  box-shadow: none; -webkit-box-shadow: none;} 
   .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none; border-color:red;}
 
@@ -93,4 +98,11 @@
     color: white;
     background-color: #ea4335;
    
+  }
+  body {
+    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
   }
