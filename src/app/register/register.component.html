@@ -1,40 +1,85 @@
-<body>
+<body>  
 <div class="container">
   <div class="row">
-    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
       <div class="card card-signin my-5">
         <div class="card-body">
-          <h5 class="card-title text-center">Register</h5>
-          <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+          <h5 class="card-title text-center" style="color:rgb(4, 99, 4); font-weight: bold;">Join With Us</h5>
+          <p class="hint-text text-center">Do you want to know yourself better?</p>
           <form class="form-signin">
-              <div class="input-container" style="margin-bottom: 8px;">
-                  <div class="row">
-                      <div class="col-md-6"><input type="text" class="form-control form-control-sm" style=" border-radius: 5px 5px 5px 5px" name="first_name" placeholder="First Name" required="required"></div>
-                      <div class="col-md-6"><input type="text" class="form-control form-control-sm" style=" border-radius: 5px 5px 5px 5px" name="last_name" placeholder="Last Name" required="required"></div>
-                    </div>  </div> 
-                    <div class="input-container"style="margin-bottom: 8px;">
-                        <div class="row">
-                            <div class="col-md-6">
-                              <input type="text" class="form-control form-control-sm" style=" border-radius: 5px 5px 5px 5px" name="height" placeholder="Height" required="required"></div>
-                            <div class="col-md-6"><input type="text" class="form-control form-control-sm" style=" border-radius: 5px 5px 5px 5px" name="weight" placeholder="Weight" required="required"></div>
-                          </div>  </div>   
-              <div class="input-container">
-                  <i class="fa fa-user icon mb-4 form-control-sm"></i>
-                  <input class="form-control mb-4 form-control-sm" type="text" placeholder="Username" name="usrnm">
-                  </div>   
+
+            <div class="container">
+              <div class="row">
+              <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
                   <div class="input-container">
-                  <i class="fa fa-envelope icon mb-4 form-control-sm"></i>
-                  <input class="form-control mb-4 form-control-sm" type="email" placeholder="Email Address" name="email">
-                  </div>
+                      <i class="fa fa-user-circle icon mb-4 "></i>
+                      <input class="form-control mb-4 "   type="text" placeholder="Fist Name" name="usrnm">
+                      </div>  
+                      <div class="input-container">
+                          <i class="fa fa-user-circle icon mb-4 "></i>
+                          <input class="form-control mb-4 "  type="text" placeholder="Last Name" name="usrnm">
+                          </div>  
+              
                   <div class="input-container">
-                      <i class="fa fa-lock prefix icon mb-4"></i>
-                  <input class="form-control mb-4" type="password" placeholder="Password" name="password" required>
-                  
+                      <i class="fa fa-weight icon mb-4 "></i>
+                      <input class="form-control mb-4 "   type="text" placeholder="Weight" name="Weight">
+                      </div>   
+                      <div class="input-container">
+                      <i class="fa fa-child icon mb-4 "></i>
+                      <input class="form-control mb-4 "   type="text" placeholder="Height" name="Height">
+                      </div>
+                      <div class="input-container" style="margin-bottom: 8px;">
+                          
+                                   <h6 style="padding-top:5px; font-weight:normal">Gender</h6>
+                                   <div class="custom-control custom-radio custom-control-inline" style="margin-left:30px ">
+                                       <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                       <label class="custom-control-label" for="defaultInline1">Male</label>
+                                     </div>
+                                     
+                                     <!-- Default inline 2-->
+                                     <div class="custom-control custom-radio custom-control-inline" >
+                                       <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                       <label class="custom-control-label"  for="defaultInline2">Female</label>
+                                     </div>
+                               </div> 
+
+
                 </div>
-                <div class="input-container">
-                    <i class="fa fa-phone icon mb-4 form-control-sm"></i>
-                    <input class="form-control mb-4 form-control-sm" type="tel" placeholder="Contact Number" name="contact" required>
-                  </div>
+                <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
+                  
+                            <div class="input-container">
+                                <i class="fa fa-user icon mb-4 "></i>
+                                <input class="form-control mb-4 "  style="border-left: 0px" type="text" placeholder="Username" name="usrnm">
+                                </div>   
+                                <div class="input-container">
+                                <i class="fa fa-envelope icon mb-4 "></i>
+                                <input class="form-control mb-4"  style="border-left: 0px" type="email" placeholder="Email Address" name="email">
+                                </div>
+                   
+                        <div class="input-container">
+                            <i class="fa fa-lock prefix icon mb-4 "></i>
+                        <input class="form-control mb-4 " style="border-left: 0px" type="password" placeholder="Password" name="password" required>
+                    </div>
+                      <div class="input-container">
+                          <i class="fa fa-check-circle icon mb-4 "></i>
+                          <input class="form-control mb-4 "  style="border-left: 0px" type="password" placeholder="Confirm Password" name="contact" required>
+                        </div>
+                        <div class="input-container">
+                        <div class="custom-file mb-3" >
+                            <input type="file" class="custom-file-input" id="customFile" name="filename">
+                            <label class="custom-file-label" style="border-color: gray" for="customFile">Upload your photo</label>
+                          </div>
+                        </div>
+                      
+                      </div>
+              </div></div>
+
+
+
+
+
+
+
                   <div class="row">
                       <div class="col-xs-6 col-sm-6 col-md-6">
                                     <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign Up">
@@ -44,11 +89,18 @@
                       </div>
                     </div>
                    
-            <div class="text-center">Already have an account? <a href="#">Sign in</a></div>
+            <div class=" hint-text text-center" style="margin-top:10px;">Already have an account? <a href="#">Sign in</a></div>
           </form>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    </script>
 </body>
