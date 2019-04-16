@@ -30,15 +30,18 @@
             <div class="card card-signin my-5">
               <div class="card-body">
                 <h5 class="card-title text-center">Sign In</h5>
+              <div class="alert alert-danger" *ngIf="showErrorMessage" [ngStyle]="{'color':'red'}">
+                {{errorMsg}}
+              </div>
                 <form class="form-signin">
-                  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
                       <!-- Password -->
-                      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+                      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
                   <div class="custom-control custom-checkbox mb-3">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
                     <label class="custom-control-label" for="customCheck1">Remember password</label>
                   </div>
-                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="login()">Sign in</button>
                   <hr class="my-4">
                   <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
                   </form>
