@@ -9,7 +9,7 @@ import { RegisterComponent } from '../app/register/register.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/sample',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
