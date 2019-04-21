@@ -1,110 +1,105 @@
-<body>  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
-      <div class="card card-signin my-5">
-        <div class="card-body">
-          <h5 class="card-title text-center" style="color:rgb(4, 99, 4); font-weight: bold;">Join With Us</h5>
-          <p class="hint-text text-center" style="margin-top:-30px;">Do you want to know yourself better?</p>
-          <form class="form-signin">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-9 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center" style="color:rgb(4, 99, 4); font-weight: bold;">Join With Us</h5>
+            <p class="hint-text text-center" style="margin-top:-30px;">Do you want to know yourself better?</p>
+            <form class="form-signin">
 
-            <div class="container">
-              <div class="row">
-              <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
-                  <div class="input-container">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
+                    <div class="input-container">
                       <i class="fa fa-user-circle icon mb-4 "></i>
-                      <input class="form-control mb-4 "   type="text" placeholder="Fist Name" name="usrnm">
-                      </div>  
-                      <div class="input-container">
-                          <i class="fa fa-user-circle icon mb-4 "></i>
-                          <input class="form-control mb-4 "  type="text" placeholder="Last Name" name="usrnm">
-                          </div>  
-              
-                  <div class="input-container">
+                      <input class="form-control mb-4 required-field" type="text" placeholder="First Name" [(ngModel)]="firstName">
+                    </div>
+                    <div class="input-container">
+                      <i class="fa fa-user-circle icon mb-4 "></i>
+                      <input class="form-control mb-4 " type="text" placeholder="Last Name" [(ngModel)]="lastName">
+                    </div>
+
+                    <div class="input-container">
                       <i class="fa fa-weight icon mb-4 "></i>
-                      <input class="form-control mb-4 "   type="text" placeholder="Weight" name="Weight">
-                      </div>   
-                      <div class="input-container">
+                      <input class="form-control mb-4 " type="text" placeholder="Weight" [(ngModel)]="weight">
+                    </div>
+                    <div class="input-container">
                       <i class="fa fa-child icon mb-4 "></i>
-                      <input class="form-control mb-4 "   type="text" placeholder="Height" name="Height">
+                      <input class="form-control mb-4 " type="text" placeholder="Height" [(ngModel)]="height">
+                    </div>
+                    <div class="input-container" style="margin-bottom: 8px;">
+
+                      <h6 style="padding-top:5px; font-weight:normal">Gender</h6>
+                      <div class="custom-control custom-radio custom-control-inline" style="margin-left:30px ">
+                        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline1">Male</label>
                       </div>
-                      <div class="input-container" style="margin-bottom: 8px;">
-                          
-                                   <h6 style="padding-top:5px; font-weight:normal">Gender</h6>
-                                   <div class="custom-control custom-radio custom-control-inline" style="margin-left:30px ">
-                                       <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                                       <label class="custom-control-label" for="defaultInline1">Male</label>
-                                     </div>
-                                     
-                                     <!-- Default inline 2-->
-                                     <div class="custom-control custom-radio custom-control-inline" >
-                                       <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                                       <label class="custom-control-label"  for="defaultInline2">Female</label>
-                                     </div>
-                                     <div class="custom-control custom-radio custom-control-inline" >
-                                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                                        <label class="custom-control-label"  for="defaultInline3">Others</label>
-                                      </div>
-                               </div> 
 
+                      <!-- Default inline 2-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline2">Female</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                        <label class="custom-control-label" for="defaultInline3">Others</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
 
+                    <div class="input-container">
+                      <i class="fa fa-user icon mb-4 "></i>
+                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Username" [(ngModel)]="username">
+                    </div>
+                    <div class="input-container">
+                      <i class="fa fa-envelope icon mb-4 "></i>
+                      <input class="form-control mb-4" style="border-left: 0px" type="email" placeholder="Email Address" [(ngModel)]="email">
+                    </div>
+
+                    <div class="input-container">
+                      <i class="fa fa-lock prefix icon mb-4 "></i>
+                      <input class="form-control mb-4 " style="border-left: 0px" type="password" placeholder="Password" [(ngModel)]="password" required>
+                    </div>
+                    <div class="input-container">
+                      <i class="fa fa-birthday-cake icon mb-4 "></i>
+                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Age" [(ngModel)]="age" required>
+                    </div>
+                    <div class="input-container">
+                      <div class="custom-file mb-3">
+                        <input type="file" class="custom-file-input " id="customFile" name="filename">
+                        <label class="custom-file-label form-control form-control-upload" for="customFile">Upload your photo</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
-                  
-                            <div class="input-container">
-                                <i class="fa fa-user icon mb-4 "></i>
-                                <input class="form-control mb-4 "  style="border-left: 0px" type="text" placeholder="Username" name="usrnm">
-                                </div>   
-                                <div class="input-container">
-                                <i class="fa fa-envelope icon mb-4 "></i>
-                                <input class="form-control mb-4"  style="border-left: 0px" type="email" placeholder="Email Address" name="email">
-                                </div>
-                   
-                        <div class="input-container">
-                            <i class="fa fa-lock prefix icon mb-4 "></i>
-                        <input class="form-control mb-4 " style="border-left: 0px" type="password" placeholder="Password" name="password" required>
-                    </div>
-                      <div class="input-container">
-                          <i class="fa fa-birthday-cake icon mb-4 "></i>
-                          <input class="form-control mb-4 "  style="border-left: 0px" type="text" placeholder="Age" name="contact" required>
-                        </div>
-                        <div class="input-container">
-                        <div class="custom-file mb-3" >
-                            <input type="file" class="custom-file-input" id="customFile" name="filename">
-                            <label class="custom-file-label" style="border-color: gray" for="customFile">Upload your photo</label>
-                          </div>
-                        </div>
-                      
-                      </div>
-              </div></div>
+              </div>
 
+              <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign Up">
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                  <button class="btn btn-lg btn-primary btn-block btn-google">
+                    <i class="fab fa-google mr-2"></i>Sign Up with Google</button>
+                </div>
+              </div>
 
-
-
-
-
-
-                  <div class="row">
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign Up">
-                      </div>
-                      <div class="col-xs-6 col-sm-6 col-md-6">
-                          <button class="btn btn-lg btn-primary btn-block btn-google"><i class="fab fa-google mr-2"></i>Sign Up with Google</button>
-                      </div>
-                    </div>
-                   
-            <div class=" hint-text text-center" style="margin-top:30px;">Already have an account? <a href="#">Sign in</a></div>
-          </form>
+              <div class=" hint-text text-center" style="margin-top:30px;">Already have an account?
+                <a href="#">Sign in</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script>
+  <script>
     // Add the following code if you want the name of the file appear on select
-    $(".custom-file-input").on("change", function() {
+    $(".custom-file-input").on("change", function () {
       var fileName = $(this).val().split("\\").pop();
       $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     });
-    </script>
+  </script>
 </body>

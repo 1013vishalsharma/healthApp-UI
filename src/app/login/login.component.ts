@@ -17,13 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor(public loginService: LoginService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() {
-    this.initmethod();
-  }
-
-  initmethod() {
-    console.log('sabse pela method h ye');
-  }
+  ngOnInit() { }
 
   login() {
     console.log(this.email);
