@@ -42,24 +42,31 @@
  
   .icon {
     padding: 8px;
-    border-width: 1px;
-    border-style: solid;
-    border-color:gray;
     border-image: initial;
     color:black;
     min-width: 50px;
     text-align: center;
-    border-right:0px;
-    border-radius: 5px 0px 0px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(199, 193, 193, 0.856) ;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
   }
   
   .form-control {
-    border-color: gray;
-    border-left: 0px;
-    border-radius: 0px 5px 5px 0px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(199, 193, 193, 0.856) ;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .form-control-upload:focus {
+    border-color: rgba(199, 193, 193, 0.856);   box-shadow: none; -webkit-box-shadow: none;
   }
  
-  .form-control:focus{border-color: gray;  box-shadow: none; -webkit-box-shadow: none;} 
+  .form-control:focus{ border-color: rgba(199, 193, 193, 0.856);   box-shadow: none; -webkit-box-shadow: none;} 
   .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none; border-color:red;}
 
 
@@ -106,3 +113,8 @@
     background-size: cover;
     -o-background-size: cover;
   }
+
+  .required-field::after {
+    content: "*";
+    color: red;
+}
