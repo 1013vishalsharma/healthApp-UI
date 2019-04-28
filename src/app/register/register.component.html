@@ -6,44 +6,42 @@
           <div class="card-body">
             <h5 class="card-title text-center" style="color:rgb(4, 99, 4); font-weight: bold;">Join With Us</h5>
             <p class="hint-text text-center" style="margin-top:-30px;">Do you want to know yourself better?</p>
-            <form class="form-signin">
+            <form class="form-signin" #registerForm="ngForm">
 
               <div class="container">
                 <div class="row">
                   <div class="col-sm-4 col-md-6 col-lg-6 mx-auto">
                     <div class="input-container">
                       <i class="fa fa-user-circle icon mb-4 "></i>
-                      <input class="form-control mb-4 required-field" type="text" placeholder="First Name" [(ngModel)]="firstName">
+                      <input class="form-control mb-4 required-field" type="text" placeholder="First Name"  [(ngModel)]="register.firstname" [ngModelOptions]="{standalone: true}">
                     </div>
                     <div class="input-container">
                       <i class="fa fa-user-circle icon mb-4 "></i>
-                      <input class="form-control mb-4 " type="text" placeholder="Last Name" [(ngModel)]="lastName">
+                      <input class="form-control mb-4 " type="text" placeholder="Last Name" [(ngModel)]="register.lastname" [ngModelOptions]="{standalone: true}">
                     </div>
 
                     <div class="input-container">
                       <i class="fa fa-weight icon mb-4 "></i>
-                      <input class="form-control mb-4 " type="text" placeholder="Weight" [(ngModel)]="weight">
+                      <input class="form-control mb-4 " type="text" placeholder="Weight" [(ngModel)]="register.weight" [ngModelOptions]="{standalone: true}">
                     </div>
                     <div class="input-container">
                       <i class="fa fa-child icon mb-4 "></i>
-                      <input class="form-control mb-4 " type="text" placeholder="Height" [(ngModel)]="height">
+                      <input class="form-control mb-4 " type="text" placeholder="Height" [(ngModel)]="register.height" name="height">
                     </div>
                     <div class="input-container" style="margin-bottom: 8px;">
 
                       <h6 style="padding-top:5px; font-weight:normal">Gender</h6>
                       <div class="custom-control custom-radio custom-control-inline" style="margin-left:30px ">
-                        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                        <label class="custom-control-label" for="defaultInline1">Male</label>
-                      </div>
-
-                      <!-- Default inline 2-->
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                        <label class="custom-control-label" for="defaultInline2">Female</label>
+                        <input type="radio" class="custom-control-input" id="MaleGender" name="gender" value="Male" [(ngModel)]="register.gender">
+                        <label class="custom-control-label" for="MaleGender">Male</label>
                       </div>
                       <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                        <label class="custom-control-label" for="defaultInline3">Others</label>
+                        <input type="radio" class="custom-control-input" id="FemaleGender" name="gender" value="Female" [(ngModel)]="register.gender">
+                        <label class="custom-control-label" for="FemaleGender">Female</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="OtherGender" name="gender" value="Others" [(ngModel)]="register.gender">
+                        <label class="custom-control-label" for="OtherGender">Others</label>
                       </div>
                     </div>
                   </div>
@@ -51,25 +49,25 @@
 
                     <div class="input-container">
                       <i class="fa fa-user icon mb-4 "></i>
-                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Username" [(ngModel)]="username">
+                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Username" [(ngModel)]="register.username" [ngModelOptions]="{standalone: true}">
                     </div>
                     <div class="input-container">
                       <i class="fa fa-envelope icon mb-4 "></i>
-                      <input class="form-control mb-4" style="border-left: 0px" type="email" placeholder="Email Address" [(ngModel)]="email">
+                      <input class="form-control mb-4" style="border-left: 0px" type="email" placeholder="Email Address" [(ngModel)]="register.email" [ngModelOptions]="{standalone: true}">
                     </div>
 
                     <div class="input-container">
                       <i class="fa fa-lock prefix icon mb-4 "></i>
-                      <input class="form-control mb-4 " style="border-left: 0px" type="password" placeholder="Password" [(ngModel)]="password" required>
+                      <input class="form-control mb-4 " style="border-left: 0px" type="password" placeholder="Password" [(ngModel)]="register.password" [ngModelOptions]="{standalone: true}" required>
                     </div>
                     <div class="input-container">
                       <i class="fa fa-birthday-cake icon mb-4 "></i>
-                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Age" [(ngModel)]="age" required>
+                      <input class="form-control mb-4 " style="border-left: 0px" type="text" placeholder="Age" [(ngModel)]="register.age" [ngModelOptions]="{standalone: true}" required>
                     </div>
                     <div class="input-container">
                       <div class="custom-file mb-3">
-                        <input type="file" class="custom-file-input " id="customFile" name="filename">
-                        <label class="custom-file-label form-control form-control-upload" for="customFile">Upload your photo</label>
+                        <input type="file" class="custom-file-input " id="file" name="image" [(ngModel)]="image">
+                        <label class="custom-file-label form-control form-control-upload" for="file"></label>
                       </div>
                     </div>
                   </div>
@@ -78,7 +76,7 @@
 
               <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-6">
-                  <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign Up">
+                  <input type="submit" class="btn btn-lg btn-success btn-block" (click)="signUp(register)" value="Sign Up">
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                   <button class="btn btn-lg btn-primary btn-block btn-google">
@@ -88,6 +86,8 @@
 
               <div class=" hint-text text-center" style="margin-top:30px;">Already have an account?
                 <a href="#">Sign in</a>
+                <br>our register object {{ register | json }}
+                <br>angular generated form obj {{ registerForm.value | json }}
               </div>
             </form>
           </div>
@@ -95,11 +95,13 @@
       </div>
     </div>
   </div>
+  
   <script>
     // Add the following code if you want the name of the file appear on select
-    $(".custom-file-input").on("change", function () {
-      var fileName = $(this).val().split("\\").pop();
-      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    $("#file").on("change", function () {
+      //var fileName = $(this).val().split("\\").pop();
+      //$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+      $("#image").text(this.files[0].name);
     });
   </script>
 </body>
