@@ -14,6 +14,8 @@ import { AuthInterceptor } from './AuthInterceptor';
 import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
 import { SampleComponent } from './sample/sample.component';
 import { RegisterComponent } from './register/register.component';
+import { CalendarModule } from 'primeng/calendar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     HttpModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CalendarModule,
+    BrowserAnimationsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
