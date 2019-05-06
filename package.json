@@ -25,7 +25,8 @@
     "zone.js": "~0.8.26",
     "@angular/http": "^7.2.5",
     "moment": "^2.24.0",
-    "primeng": "^7.1.2"
+    "primeng": "^7.1.2",
+    "tar": "^4.4.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
