@@ -2,105 +2,115 @@
   dashboard works!
 </p> -->
 
+<head>
+        <script>
+                
+                        $( function() {
+                    $( "#datepicker" ).datepicker();
+                    $( "#datepicker" ).datepicker("show");
+                  } );
+                
+                
+                    </script>
+</head>
+
 <div style="height: 40px; font-family: -apple-system, BlinkMacSystemFont, 
 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-  <h1 style="padding-left: 20px; color: rgb(22, 24, 18)">Dashboard</h1>
+    <h1 style="padding-left: 20px; color: rgb(22, 24, 18)">Dashboard</h1>
 </div>
 <hr>
 <br>
 <br>
 <div>
-  <div style="height: 200px; width: 200px; margin: 40px; box-sizing: border-box;
+    <div style="height: 200px; width: 200px; margin: 40px; box-sizing: border-box;
    box-shadow: 0 6px 16px 0 darkolivegreen; float: left">
-    <a routerLink='/fitness-track' (click) = getFitnessTrackData()>
-      <div style="height:  200px; width: 200px">
-          <h1 style="color: darkolivegreen; text-align: center; float: left; word-wrap: break-word;
+        <a routerLink='/fitness-track' (click)=getFitnessTrackData()>
+            <div style="height:  200px; width: 200px">
+                <h1 style="color: darkolivegreen; text-align: center; float: left; word-wrap: break-word;
           position: relative; top: 40%; transform: translateY(-50%); margin-left: 10%; margin-right: 10%">
-           Fitness Track</h1>
-      </div>
-    </a>
-  </div>
-  <div style="height: 200px; width: 200px; margin: 40px; box-sizing: border-box;
+                    Fitness Track</h1>
+            </div>
+        </a>
+    </div>
+    <div style="height: 200px; width: 200px; margin: 40px; box-sizing: border-box;
   box-shadow: 0 6px 16px 0 darkolivegreen;  float: left">
-  <a href="www.google.com">
-      <div style="height:  200px; width: 200px">
-          <h1 style="color: darkolivegreen; text-align: center; float: left; word-wrap: break-word;
+        <a href="www.google.com">
+            <div style="height:  200px; width: 200px">
+                <h1 style="color: darkolivegreen; text-align: center; float: left; word-wrap: break-word;
           position: relative; top: 40%; transform: translateY(-50%); margin-left: 10%; margin-right: 10%">
-           Knowledge Track</h1>
-      </div>
-  </a>
- </div>
+                    Knowledge Track</h1>
+            </div>
+        </a>
+    </div>
 </div>
 <!-- Button HTML (to Trigger Modal) -->
 <a href="#myModal" role="button" class="btn btn-sm btn-primary shadow-none" style=" border-color: white;
-background-color:white;" data-toggle="modal"> <i class="fa fa-plus fa-3x add"></i></a>
+background-color:white;" data-toggle="modal">
+    <i class="fa fa-plus fa-3x add"></i>
+</a>
 
 <!-- Modal HTML -->
-<div id="myModal" class="modal fade">
-  
-      <div class="modal-dialog modal-dialog-centered" role="document">
-       <div class="modal-content">
-        
-           <div class="modal-body">
-             <img class="img-rounded center-block" style="align-items: center;"alt="100*100"  src="../assets/Profile.png" data-holder-rendered="true">
-            
-             <div class="container">
-                <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
-            
-                    <div class="input-container">
-                         <!-- <input type="date" style=" width: 100%;"  class="form-control"  name="Date"></div> -->
-                       
-                         <div class='input-group date'>
-                                <input type="text" class="form-control datepicker"/>
-                               
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+                <img class="rounded-circle img-fluid center-block" alt="avatar" style="align-items: center;" alt="100*100" src="../assets/Profile.png">
+            </div>
+            <!-- Body -->
+            <div class="modal-body text-center mb-1">
+                    <p>Date: <input type="text" id="datepicker"></p>
+                    <p-calendar [(ngModel)]="value"></p-calendar>
+                <!-- <form>
+                    <div class="form-group">
+
+                    </div>
+                </form> -->
+                
+                
+                <div class="mod">
+                    <div class="">
+                        <div class="input-container">
+                            <!-- <input type="date" style=" width: 100%;"  class="form-control"  name="Date"></div> -->
+
+                            <div class='input-group date'>
+                                <input type="text" class="form-control datepicker" />
+
                             </div>
                         </div>
-                         <div class="input-container">
+                        <div class="input-container">
                             <i class="fa fa-clock icon " aria-hidden="true"></i>
-                            <input class="form-control text1"  type="text" placeholder="Workout Time" name="Weight">
-                            </div> 
-                </div>
-            
-             <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
-                <div class="input-container">
-                    <select style=" width: 100%" class="form-control input-lg" >
-                        <option value="" selected disabled>Workout Type</option>
-                        <option value="">Running</option>
-                        <option value="">Walking</option>
-                        <option value="">Legs</option>
-                    </select>
-                  </div>
-            
-             <div class="input-container" style="margin-bottom: 8px;">
-                
-                <select style=" width: 100%" class="form-control input-lg" >
-                    <option value="" selected disabled>Food</option>
-                    <option value="">Healthy</option>
-                    <option value="">UnHealthy</option>
-                   
-                </select>
-                          
-                     </div> 
+                            <input class="form-control text1" type="text" placeholder="Workout Time" name="Weight">
+                        </div>
                     </div>
-                 
-       </div>
-           <div class="modal-footer" style="margin-bottom:-20px;">
-               <button type="button" class="btn btn-primary btn-sm btn-save ">Save Activity</button>
-           </div>
-       </div>
-   </div>
-</div>
-<script>
+
+                    <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
+                        <div class="input-container">
+                            <select style=" width: 100%" class="form-control input-lg">
+                                <option value="" selected disabled>Workout Type</option>
+                                <option value="">Running</option>
+                                <option value="">Walking</option>
+                                <option value="">Legs</option>
+                            </select>
+                        </div>
+
+                        <div class="input-container" style="margin-bottom: 8px;">
+
+                            <select style=" width: 100%" class="form-control input-lg">
+                                <option value="" selected disabled>Food</option>
+                                <option value="">Healthy</option>
+                                <option value="">UnHealthy</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer" style="margin-bottom:-20px;">
+                    <button type="button" class="btn btn-primary btn-sm btn-save ">Save Activity</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    $('.datepicker').datetimepicker({
-    format: 'DD-MM-YYYY HH:mm:ss'
-});
-$(function () {
-
-    $('#myModal').modal('toggle');
-  });
- 
-
-  </script>
-   
