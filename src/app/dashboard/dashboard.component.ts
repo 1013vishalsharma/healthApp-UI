@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarModule } from 'primeng/calendar';
 
 @Component({
   selector: 'app-dashboard',

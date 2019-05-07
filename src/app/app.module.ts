@@ -14,8 +14,8 @@ import { AuthInterceptor } from './AuthInterceptor';
 import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
 import { SampleComponent } from './sample/sample.component';
 import { RegisterComponent } from './register/register.component';
-import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -35,8 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpModule,
     FormsModule,
     HttpClientModule,
-    CalendarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
