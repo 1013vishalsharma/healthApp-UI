@@ -16,6 +16,7 @@ import { SampleComponent } from './sample/sample.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
