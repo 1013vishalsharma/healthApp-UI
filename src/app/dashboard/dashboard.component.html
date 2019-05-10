@@ -33,7 +33,7 @@ background-color:white;" data-toggle="modal">
     <i class="fa fa-plus fa-3x add"></i>
 </a>
 
-<form [formGroup]="addActivityForm" (ngSubmit)="addActivity()">
+<form [formGroup]="addActivityForm">
     <!-- Modal HTML -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -53,37 +53,28 @@ background-color:white;" data-toggle="modal">
                         <!-- WorkoutTime -->
                         <div class="input-container">
                             <i class="fa fa-clock icon " aria-hidden="true"></i>
-                            <input type="text" id="workoutTime" formControlName="workoutTime" placeholder="Workout Time" class="form-control" name="Weight">
+                            <input type="text" id="workoutDuration" formControlName="workoutDuration" placeholder="Workout Duration" class="form-control" name="Weight">
                         </div>
                         <!-- WorkoutType -->
                         <div class="input-container">
-                            <select style=" width: 100%" class="form-control input-lg">
-                                <option value="" selected disabled>Workout Type</option>
-                                <option value="">Running</option>
-                                <option value="">Walking</option>
-                                <option value="">Legs</option>
-                                <option value="">Chest</option>
-                                <option value="">Biceps</option>
-                                <option value="">Triceps</option>
-                                <option value="">Back</option>
-                                <option value="">Abs</option>
-                                <option value="">Shoulders</option>
-                                <option value="">Cardio</option>
-                                <option value="">HIIT</option>
+                            <i class="fas fa-dumbbell icon " aria-hidden="true"></i>
+                            <select style=" width: 100%" placeholder="Workout Type" formControlName='workoutType' class="form-control input-lg">
+                                <option hidden [ngValue]="null">Workout Type</option>
+                                <option *ngFor='let workoutType of workoutTypes' [value]='workoutType'>{{workoutType}}</option>
                             </select>
                         </div>
                         <!-- Food Type -->
                         <div class="input-container">
-                            <select style=" width: 100%" class="form-control input-lg">
-                                <option value="" selected disabled>Food</option>
-                                <option value="">Healthy</option>
-                                <option value="">UnHealthy</option>
+                                <i class="fas fa-hamburger icon " aria-hidden="true"></i>
+                            <select style=" width: 100%" formControlName='foodType' class="form-control input-lg">
+                                <option hidden [ngValue]="null">Food Type</option>
+                                <option *ngFor='let foodType of foodTypes' [value]='foodType'>{{foodType}}</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-group-lg btn-save ">Save Activity</button>
+                    <button type="button" class="btn btn-primary btn-group-lg btn-save" (click)='addActivity()' data-dismiss="myModal">Save Activity</button>
                 </div>
             </div>
         </div>
