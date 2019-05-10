@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DashboardService } from '../dashboard/dashboard.service';
-import { AddActivity } from '../dashboard/AddActivity';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +11,8 @@ export class DashboardComponent implements OnInit {
   addActivityForm: FormGroup;
   workoutTypes = ['Legs', 'Chest', 'Biceps', 'Triceps', 'Back', 'Abs', 'Shoulders', 'Cardio'];
   foodTypes = ['Healthy', 'Unhealthy'];
-  addActivityData: AddActivity;
+
+
   constructor(private dashboadService: DashboardService) { }
 
   ngOnInit() {
