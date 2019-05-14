@@ -25,14 +25,7 @@ export class DashboardComponent implements OnInit {
   }
 
   addActivity(): void{
-    console.log(this.addActivityForm.value)
-    //  this.addActivityData = new AddActivity({
-    //    this.addActivityForm.get('workoutDate').value,
-    //    this.addActivityForm.get('workoutType').value,
-    //    this.addActivityForm.get('workoutDate').value,
-    //    this.addActivityForm.get('workoutDate').value,
-    //  });
-
+    console.log(this.addActivityForm.value);
     this.dashboadService.addActivityToMongo(this.addActivityForm.value)
     .subscribe((data: {}) => {
       console.log(data);
