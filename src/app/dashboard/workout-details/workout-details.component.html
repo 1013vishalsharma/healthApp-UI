@@ -1,0 +1,47 @@
+<form [formGroup]="addActivityForm">
+  <!-- Modal HTML -->
+  <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <!-- Header -->
+              <div class="modal-header">
+                  <img class="rounded-circle img-fluid center-block" alt="avatar" style="align-items: center;" alt="100*100" src="../assets/Profile.png">
+              </div>
+              <!-- Body -->
+              <div class="modal-body text-center mb-1">
+                  <div class="col-sm-8 col-md-8 col-lg-8 mx-auto">
+                      <!-- DatePicker -->
+                      <div class="input-container">
+                          <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                          <input type="text" id="workoutDate" formControlName="workoutDate" placeholder="Workout Date" class="form-control" bsDatepicker>
+                      </div>
+                      <!-- WorkoutTime -->
+                      <div class="input-container">
+                          <i class="fa fa-clock icon " aria-hidden="true"></i>
+                          <input type="text" id="workoutDuration" formControlName="workoutDuration" placeholder="Workout Duration" class="form-control" name="Weight">
+                      </div>
+                      <!-- WorkoutType -->
+                      <div class="input-container">
+                          <i class="fas fa-dumbbell icon " aria-hidden="true"></i>
+                          <select style=" width: 100%" placeholder="Workout Type" formControlName='workoutType' class="form-control input-lg">
+                              <option hidden [ngValue]="null">Workout Type</option>
+                              <option *ngFor='let workoutType of workoutTypes' [value]='workoutType'>{{workoutType}}</option>
+                          </select>
+                      </div>
+                      <!-- Food Type -->
+                      <div class="input-container">
+                              <i class="fas fa-hamburger icon " aria-hidden="true"></i>
+                          <select style=" width: 100%" formControlName='foodType' class="form-control input-lg">
+                              <option hidden [ngValue]="null">Food Type</option>
+                              <option *ngFor='let foodType of foodTypes' [value]='foodType'>{{foodType}}</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer text-center mt-4">
+                  <button type="button" class="btn btn-primary btn-group-lg btn-save" (click)='addActivity()' data-dismiss="modal">Save Activity</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</form>

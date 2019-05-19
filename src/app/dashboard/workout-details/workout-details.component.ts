@@ -1,20 +1,18 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { DashboardService } from '../dashboard/dashboard.service';
-import { WorkoutDetailsComponent } from '../dashboard/workout-details/workout-details.component'
+import { WorkoutDetailsService } from '../workout-details/workout-details.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-workout-details',
+  templateUrl: './workout-details.component.html',
+  styleUrls: ['./workout-details.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class WorkoutDetailsComponent implements OnInit {
   addActivityForm: FormGroup;
   workoutTypes = ['Legs', 'Chest', 'Biceps', 'Triceps', 'Back', 'Abs', 'Shoulders', 'Cardio'];
   foodTypes = ['Healthy', 'Unhealthy'];
-
-
-  constructor(private dashboadService: DashboardService, private viewContainerRef: ViewContainerRef) { }
+  
+  constructor(private workoutDetailsService: WorkoutDetailsService) {}
 
   ngOnInit() {
     this.addActivityForm = new FormGroup({
@@ -24,13 +22,14 @@ export class DashboardComponent implements OnInit {
       foodType: new FormControl()
     })
   }
-
+  
   addActivity(): void{
     console.log(this.addActivityForm.value);
-    this.dashboadService.addActivityToMongo(this.addActivityForm.value)
+    this.workoutDetailsService.addActivityToMongo(this.addActivityForm.value)
     .subscribe((data: {}) => {
       console.log(data);
     });
     
   }
+
 }
