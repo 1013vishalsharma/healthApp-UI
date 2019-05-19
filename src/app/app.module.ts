@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FitnessTrackComponent } from './fitness-track/fitness-track.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './AuthInterceptor';
-import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
+import { WorkoutDetailsComponent } from './dashboard/workout-details/workout-details.component';
 import { SampleComponent } from './sample/sample.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

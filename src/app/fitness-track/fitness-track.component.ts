@@ -1,8 +1,8 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { map, tap, catchError } from 'rxjs/operators';
-import { WorkoutDetails } from '../workout-details/workout-details';
-import { IWorkoutDetails } from '../workout-details/Iworkout-details';
+import { WorkoutDetails } from '../dashboard/workout-details/workout-details';
+import { IWorkoutDetails } from '../dashboard/workout-details/Iworkout-details';
 
 
 @Component({
@@ -53,7 +53,7 @@ export class FitnessTrackComponent implements OnInit {
     this.workoutDetails.workoutTime = lastWorkoutDate;
   }
 
-  toggleShowHide(){
+  toggleShowHide(){ 
     
   }
 }
