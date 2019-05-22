@@ -16,7 +16,10 @@ import { SampleComponent } from './sample/sample.component';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout'
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     FitnessTrackComponent,
     WorkoutDetailsComponent,
     SampleComponent,
-    RegisterComponent
+    RegisterComponent,
+    MyDashboardComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),
@@ -38,7 +42,13 @@ import { ReactiveFormsModule } from '@angular/forms'
     HttpClientModule,
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
