@@ -29,9 +29,13 @@ export class LoginService {
 
    login(loginData: Login): Observable<any>{
     console.log(loginData);
-       const token = this.http.post(this.loginUrl, loginData).pipe(map(this.extractData));
-       console.log('token in login service: '+token);
-       return token;
+    const body = {
+      loginInfo: loginData.email,
+      password: loginData.password
+    }
+    const token = this.http.post(this.loginUrl, body).pipe(map(this.extractData));
+    console.log('token in login service: '+token);
+    return token;
    } 
 
 
