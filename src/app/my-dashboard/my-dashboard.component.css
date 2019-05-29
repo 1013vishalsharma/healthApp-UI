@@ -2,13 +2,13 @@
   margin: 20px;
 }
 
+
 .dashboard-card {
   position: absolute;
   top: 15px;
   left: 15px;
   right: 15px;
   bottom: 15px;
-  background-color: cornflowerblue
 }
 
 .more-button {
@@ -17,14 +17,10 @@
   right: 10px;
 }
 
-.dashboard-card-content {
-  text-align: center;
-}
-
 .mat-card-title {
-  text-align: center;
+  font-size: 25px
 }
 
 .mat-card-header {
-  text-align: center;
+  justify-content: center;
 }
