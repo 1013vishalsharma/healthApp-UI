@@ -8,6 +8,7 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  background-color: cornflowerblue
 }
 
 .more-button {
@@ -17,5 +18,13 @@
 }
 
 .dashboard-card-content {
+  text-align: center;
+}
+
+.mat-card-title {
+  text-align: center;
+}
+
+.mat-card-header {
   text-align: center;
 }

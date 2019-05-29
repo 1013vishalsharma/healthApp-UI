@@ -21,10 +21,10 @@ export class MyDashboardComponent {
       }
 
       return [
-        { title: 'Card 1', cols: 1, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 1 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Last Workout Date', cols: 1, rows: 1 },
+        { title: 'Last Workout Type', cols: 1, rows: 1 },
+        { title: 'Money Collected', cols: 1, rows: 1 },
+        { title: 'Pending Hours Left', cols: 1, rows: 1 }
       ];
     })
   );
