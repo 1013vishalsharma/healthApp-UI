@@ -19,7 +19,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
-import { LayoutModule } from '@angular/cdk/layout'
+import { LayoutModule } from '@angular/cdk/layout';
+import { WeekDataComponent } from './my-dashboard/week-data/week-data.component';
+//import { WeekDataService } from './my-dashboard/week-data/week-data.service';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { LayoutModule } from '@angular/cdk/layout'
     WorkoutDetailsComponent,
     SampleComponent,
     RegisterComponent,
-    MyDashboardComponent
+    MyDashboardComponent,
+    WeekDataComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),

@@ -9,7 +9,6 @@ import * as moment from 'moment';
     providedIn: 'root'
 })
 export class LoginService {
-  title = 'app works';
   private url = 'http://localhost:3000/challenge';
   private loginUrl = 'http://localhost:3000/user/login';
   data: any = {};
