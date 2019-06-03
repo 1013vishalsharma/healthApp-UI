@@ -17,7 +17,8 @@ export class WeekDataService{
 
     dailyForcast(){
         //https://samples.openweathermap.org/data/2.5/history/city?q=Warren,OH&appid=b6907d289e10d714a6e88b30761fae22
-        return this.http.get("https://jsonplaceholder.typicode.com/posts")
+        //"https://jsonplaceholder.typicode.com/posts"
+        return this.http.get('data.json')
                         .pipe(map(result => result));
     }
 }
