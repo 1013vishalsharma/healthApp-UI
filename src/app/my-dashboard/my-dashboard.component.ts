@@ -28,7 +28,8 @@ export class MyDashboardComponent {
         { title: 'Date', cols: 1, rows: 1 },
         { title: 'Type', cols: 1, rows: 1 },
         { title: 'Amount', cols: 1, rows: 1 },
-        { title: 'Time', cols: 1, rows: 1 }
+        { title: 'Time', cols: 1, rows: 1 },
+        { title: 'chart', cols: 1, rows: 2 }
       ];
     })
   );

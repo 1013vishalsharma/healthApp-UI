@@ -20,10 +20,12 @@
           </mat-card-header>
           <mat-card-content class="dashboard-card-content">
             <div>Card Content Here</div>
+            <!-- <app-week-data [data]="data | async" ></app-week-data> -->
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-  <app-week-data></app-week-data>
+  <h1>Bar Charts</h1>
+  <app-week-data [data]="data | async" ></app-week-data>
 </div>
