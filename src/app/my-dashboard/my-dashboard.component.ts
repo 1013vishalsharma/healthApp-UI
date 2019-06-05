@@ -21,15 +21,15 @@ export class MyDashboardComponent {
       }
 
       return [
-        // { title: 'Last Workout Date', cols: 1, rows: 1 },
-        // { title: 'Last Workout Type', cols: 1, rows: 1 },
-        // { title: 'Money Collected', cols: 1, rows: 1 },
-        // { title: 'Pending Hours Left', cols: 1, rows: 1 }
-        { title: 'Date', cols: 1, rows: 1 },
-        { title: 'Type', cols: 1, rows: 1 },
-        { title: 'Amount', cols: 1, rows: 1 },
-        { title: 'Time', cols: 1, rows: 1 },
-        { title: 'chart', cols: 1, rows: 2 }
+        { title: 'Last Workout Date', cols: 1, rows: 1 },
+        { title: 'Last Workout Type', cols: 1, rows: 1 },
+        { title: 'Money Collected', cols: 1, rows: 1 },
+        { title: 'Pending Hours Left', cols: 1, rows: 1 },
+        // { title: 'Date', cols: 1, rows: 1 },
+        // { title: 'Type', cols: 1, rows: 1 },
+        // { title: 'Amount', cols: 1, rows: 1 },
+        // { title: 'Time', cols: 1, rows: 1 },
+        // { title: 'chart', cols: 2, rows: 2 }
       ];
     })
   );
