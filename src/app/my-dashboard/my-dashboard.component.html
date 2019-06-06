@@ -24,13 +24,22 @@
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
-    <div style="display: flex;">
-      <div class="chart-div-left" id="left-bar-chart">
-        <h1>Bar Charts</h1>
-        <app-week-data [data]="data | async" ></app-week-data>
+    <div style="display: flex; flex-direction: column; flex-wrap: wrap">
+      <div class="chart-div-calender-view">
+        <h1>Calender -View</h1>
+        <app-calender-view></app-calender-view>
       </div>
-      <div class="charrt-div-normal">
-
+      <div>
+        <div class="chart-div-left" id="left-bar-chart">
+          <h1>Bar Charts</h1>
+          <app-week-data [data]="data | async"></app-week-data>
+        </div>
+        <div class="charrt-div-normal">
+        </div>
+      </div>
+      <div>
+        <h1> Food Chart </h1>
+        <app-progress-donut-chart></app-progress-donut-chart>
       </div>
     </div>
   </div>

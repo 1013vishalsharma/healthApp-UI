@@ -21,6 +21,8 @@ import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
 import { WeekDataComponent } from './my-dashboard/week-data/week-data.component';
+import { CalenderViewComponent } from './my-dashboard/calender-view/calender-view.component';
+import { ProgressDonutChartComponent } from './my-dashboard/progress-donut-chart/progress-donut-chart.component';
 //import { WeekDataService } from './my-dashboard/week-data/week-data.service';
 
 
@@ -34,7 +36,9 @@ import { WeekDataComponent } from './my-dashboard/week-data/week-data.component'
     SampleComponent,
     RegisterComponent,
     MyDashboardComponent,
-    WeekDataComponent
+    WeekDataComponent,
+    CalenderViewComponent,
+    ProgressDonutChartComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),

@@ -19,6 +19,15 @@
     box-shadow: 0 6px 16px 0 darkolivegreen;
 }
 
+.chart-div-calender-view {
+    left: 15px;
+    width: calc(((25% - 0.75px) * 1) + 1px); 
+    top: calc(151px); 
+    height: calc(301px);
+    box-sizing: border-box;
+    box-shadow: 0 6px 16px 0 darkolivegreen;
+}
+
 .chart-div-normal {
     left: calc(((25% - 0.75px) + 1px) * 3); 
     width: calc(((25% - 0.75px) * 2) + 1px); 
