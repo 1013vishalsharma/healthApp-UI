@@ -23,6 +23,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { WeekDataComponent } from './my-dashboard/week-data/week-data.component';
 import { CalenderViewComponent } from './my-dashboard/calender-view/calender-view.component';
 import { ProgressDonutChartComponent } from './my-dashboard/progress-donut-chart/progress-donut-chart.component';
+import { LineChartDataComponent } from './my-dashboard/line-chart-data/line-chart-data.component';
 //import { WeekDataService } from './my-dashboard/week-data/week-data.service';
 
 
@@ -38,7 +39,8 @@ import { ProgressDonutChartComponent } from './my-dashboard/progress-donut-chart
     MyDashboardComponent,
     WeekDataComponent,
     CalenderViewComponent,
-    ProgressDonutChartComponent
+    ProgressDonutChartComponent,
+    LineChartDataComponent
   ],
   imports: [
     //RouterModule.forRoot(appRoutes),

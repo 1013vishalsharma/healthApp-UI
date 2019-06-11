@@ -19,7 +19,7 @@ export class ProgressDonutChartComponent implements OnInit {
     this.data = [
       {
         name: 'unhealthy',
-        value: 50
+        value: 15
       },
       {
         name: 'healthy',
@@ -30,9 +30,9 @@ export class ProgressDonutChartComponent implements OnInit {
   }
 
   createProgressDonutChart(){
-    var options = {
-      d3Module: d3
-    };
+    // var options = {
+    //   d3Module: d3
+    // };
 
     const element = this.chartContainer.nativeElement;
 
@@ -48,14 +48,13 @@ export class ProgressDonutChartComponent implements OnInit {
     let width = 300;
     let height = 300;
 
-    let valArr = [];
+    let valArr :number[] = [];
     this.data.forEach(element => {
       valArr.push(element.value);
     })
 
-    var pie1 = d3.pie().value((d: HealthData) => { return d.value})
-    console.log(pie1(this.data));
-
+    var pie1 = d3.pie<HealthData>().value((d: HealthData):number => d.value);
+    
     let outerRadius = (width/2)-35;
     let innerRadius = 75;
 
@@ -103,7 +102,7 @@ export class ProgressDonutChartComponent implements OnInit {
                           })
                           .attr("dy", ".4em")
                           .attr("text-anchor", "middle")
-                          .text(function(d){return d.data.name+' ('+Math.floor((d.data.value/total)*100)+')';
+                          .text(function(d:any){return d.data.name+' ('+Math.floor((d.data.value/total)*100)+')';
                           })
                           //
                           .attr('fill', function(d: HealthData,i){
