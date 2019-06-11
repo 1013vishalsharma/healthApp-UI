@@ -53,9 +53,8 @@ export class ProgressDonutChartComponent implements OnInit {
       valArr.push(element.value);
     })
 
-    var pie1 = d3.pie().value(function(d:HealthData) { return d.value})
-    //console.log(pie1(this.data));
-
+    var pie1 = d3.pie<HealthData>().value((d: HealthData):number => d.value);
+    
     let outerRadius = (width/2)-35;
     let innerRadius = 75;
 
@@ -103,7 +102,7 @@ export class ProgressDonutChartComponent implements OnInit {
                           })
                           .attr("dy", ".4em")
                           .attr("text-anchor", "middle")
-                          .text(function(d){return d.data.name+' ('+Math.floor((d.data.value/total)*100)+')';
+                          .text(function(d:any){return d.data.name+' ('+Math.floor((d.data.value/total)*100)+')';
                           })
                           //
                           .attr('fill', function(d: HealthData,i){
