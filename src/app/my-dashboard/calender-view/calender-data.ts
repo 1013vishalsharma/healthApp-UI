@@ -1,3 +1,3 @@
 export class CalenderData{
-    constructor(public date: Date, public value: number){}
+    constructor(public day: string, public count: number){}
 }
