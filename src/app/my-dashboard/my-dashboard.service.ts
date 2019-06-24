@@ -11,10 +11,10 @@ export class MyDashboardService{
 
     constructor(private http: HttpClient){
         const httpOptions = {
-        headers: new HttpHeaders({
-            'Content-Type': 'application/json'
-        })
-    };
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        };
     }
 
     private extractData(res: Response){
@@ -24,7 +24,5 @@ export class MyDashboardService{
 
     getCardData():Observable<any>{
         return  this.http.get(this.cardDataUrl).pipe(map(this.extractData));
-        // console.log('reched here : '+aa);
-        // return aa;
     }
 }
