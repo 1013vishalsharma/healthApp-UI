@@ -17,6 +17,7 @@ export class MyDashboardComponent implements OnInit{
     this.content = this.myDashboardService.getCardData()
                         .subscribe((data:{}) => {
                         this.content = data;
+                        this.content.workoutDate = new Date(this.content.workoutDate).toDateString();
                         })
   };
 
@@ -31,34 +32,20 @@ export class MyDashboardComponent implements OnInit{
         ];
       }
 
-
-      /*
-      workoutDate: Date;
-    workoutType: any;
-    moneyCollected: any;
-    foodType: any;
-      */
-
       return [
-        { title: 'Last Workout Date', cols: 1, rows: 1, content: this.content.workoutDate },
+        { title: 'Last Workout Date', cols: 1, rows: 1, content: new Date(this.content.workoutDate).toDateString() },
         { title: 'Last Workout Type', cols: 1, rows: 1, content: this.content.workoutType },
         { title: 'Money Collected', cols: 1, rows: 1, content: this.content.moneyCollected },
-        { title: 'Pending Hours Left', cols: 1, rows: 1, content: this.content.foodType },
-        // { title: 'Date', cols: 1, rows: 1 },
-        // { title: 'Type', cols: 1, rows: 1 },
-        // { title: 'Amount', cols: 1, rows: 1 }, 
-        // { title: 'Time', cols: 1, rows: 1 },
-        // { title: 'chart', cols: 2, rows: 2 }
+        { title: 'Pending Hours Left', cols: 1, rows: 1, content: this.content.hrsleft },
       ];
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver, private myDashboardService: MyDashboardService, private route: ActivatedRoute) {
-    
+  constructor(private breakpointObserver: BreakpointObserver,
+     private myDashboardService: MyDashboardService, private route: ActivatedRoute) { 
   }
 
   ngOnInit(){
-    //this.getCardData();
     this.content = this.route.snapshot.data.content;
   }
 }
