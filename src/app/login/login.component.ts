@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           console.log(data);
           this.setSession(data);
         });
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/MyDashboard']);
     }
   }
 

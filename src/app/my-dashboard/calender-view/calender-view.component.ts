@@ -111,8 +111,6 @@ export class CalenderViewComponent implements OnInit {
           .style("fill", function(d) { return d3.interpolatePuBu(scale(lookup[d])) })
           .select("title")
           .text(function(d) { return titleFormat(new Date(d)) + ":  " + lookup[d]; });
-      
-
   }
 
 
