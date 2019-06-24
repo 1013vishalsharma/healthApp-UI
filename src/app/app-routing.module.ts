@@ -6,6 +6,8 @@ import { FitnessTrackComponent } from '../app/fitness-track/fitness-track.compon
 import { SampleComponent } from '../app/sample/sample.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { MyDashboardComponent } from '../app/my-dashboard/my-dashboard.component';
+import { MyDashboardResolver } from '../app/my-dashboard/my-dashboard.resolver';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -41,7 +43,8 @@ const routes: Routes = [
   {
     path: 'MyDashboard',
     component: MyDashboardComponent,
-    data: {title: 'MyDashBoard'}
+    data: {title: 'MyDashBoard'},
+    resolve: {content: MyDashboardResolver}
   }
 ];
 
