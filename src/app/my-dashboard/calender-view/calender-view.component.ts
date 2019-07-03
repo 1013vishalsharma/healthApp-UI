@@ -1,7 +1,11 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { CalenderData } from './calender-data'
-import * as d3Interpolate from 'd3-interpolate';
+import * as d3ScaleChro from 'd3-scale-chromatic';
+import { CalenderViewService } from './calender-view.service';
+import * as _ from 'lodash';
+import { ActivatedRoute } from '@angular/router';
+import { from } from 'rxjs';
 
 
 @Component({
@@ -16,14 +20,20 @@ export class CalenderViewComponent implements OnInit {
 
   data: CalenderData[];
 
+  constructor(private calenderService: CalenderViewService, private route: ActivatedRoute){}
+
   ngOnInit(){
     this.data= [];
-    this.getData().then(() => {
-      console.log(this.data)
-
-      this.createCalenderView(this.data);
-    })
-    
+    this.data = this.route.snapshot.data.calD;
+    _.forEach(this.data, (calData, index) => {
+      console.log(calData.day)
+      console.log(calData.count)
+      calData.day = calData.day.toLocaleString().split('T')[0];
+      let cd = new CalenderData(calData.day, calData.count);
+      this.data[index] = cd;
+    });
+    console.log(this.data)
+    this.createCalenderView(this.data);
   }
 
   createCalenderView(dateData){
@@ -35,8 +45,8 @@ export class CalenderViewComponent implements OnInit {
     var minDate = d3.min(dateData, (d: CalenderData) => {return new Date(d.day)});
     var maxDate = d3.max(dateData, (d: CalenderData) => {return new Date(d.day)});
     console.log(minDate + " " + maxDate)
-    //minDate = new Date(new Date().getFullYear(), 0,1);
-    //maxDate = new Date(new Date().getFullYear(), 11, 31);
+    minDate = new Date(new Date().getFullYear(), 0,1);
+    maxDate = new Date(new Date().getFullYear(), 11, 31);
     console.log(minDate + " " + maxDate)
     
     var cellMargin = 2,
@@ -62,7 +72,6 @@ export class CalenderViewComponent implements OnInit {
                       })
                       .attr('height',  ((cellSize * 7) + (cellMargin * 8) + 20))
                       .append('g')
-    //
 
     svg.append('text')
           .attr('class', 'month-name')
@@ -108,7 +117,7 @@ export class CalenderViewComponent implements OnInit {
           .range([0.4,1]); // the interpolate used for color expects a number in the range [0,1] but i don't want the lightest part of the color scheme
       
         rect.filter(function(d) { return d in lookup; })
-          .style("fill", function(d) { return d3.interpolatePuBu(scale(lookup[d])) })
+          .style("fill", function(d) { return d3ScaleChro.interpolatePuBu(scale(lookup[d])) })
           .select("title")
           .text(function(d) { return titleFormat(new Date(d)) + ":  " + lookup[d]; });
   }
@@ -121,4 +130,17 @@ export class CalenderViewComponent implements OnInit {
     })
   }
 
+  async getCalenderViewData(){
+    await this.calenderService.calenderViewData().subscribe((data: {}) => {
+      console.log(data);
+      let stats: CalenderData[];
+      _.forEach(data, (calData, index) => {
+        console.log(calData.day)
+        console.log(calData.count)
+        let cd = new CalenderData(calData.day, calData.count);
+        this.data[index] = cd;
+      });
+      console.log("data is " + this.data)
+    });
+  }
 }

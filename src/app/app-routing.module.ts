@@ -7,6 +7,7 @@ import { SampleComponent } from '../app/sample/sample.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { MyDashboardComponent } from '../app/my-dashboard/my-dashboard.component';
 import { MyDashboardResolver } from '../app/my-dashboard/my-dashboard.resolver';
+import { CalenderViewResolver } from '../app/my-dashboard/calender-view/calender-view.resolver';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -44,7 +45,7 @@ const routes: Routes = [
     path: 'MyDashboard',
     component: MyDashboardComponent,
     data: {title: 'MyDashBoard'},
-    resolve: {content: MyDashboardResolver}
+    resolve: {content: MyDashboardResolver, calD: CalenderViewResolver}
   }
 ];
 
